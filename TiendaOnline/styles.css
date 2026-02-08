@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #7e6060;
+    margin: 0;
+}
+
+/* ======================
+   NAVBAR
+   ====================== */
+.navbar {
+    background: #111;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ======================
+   LOGO
+   ====================== */
+.logo img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ======================
+   ANIMACIÓN DEL LOGO
+   ====================== */
+
+/* Animación al cargar */
+.logo img {
+    animation: logoFade 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover */
+.logo img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+/* Keyframes */
+@keyframes logoFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================
+   SECCIÓN PRODUCTOS
+   ====================== */
+.products {
+    padding: 2rem;
+}
+
+.product {
+    background: rgb(231, 227, 227);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* ======================
+   IMÁGENES DE PRODUCTOS
+   ====================== */
+.product img,
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* ======================
+   TALLAS Y COLORES
+   ====================== */
+.sizes,
+.colors {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.size,
+.color {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #cfbfbf;
+    cursor: pointer;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.selected {
+    background: rgb(45, 123, 19);
+    color: white;
+}
+
+/* ======================
+   BOTONES
+   ====================== */
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+/* ======================
+   CARRITO
+   ====================== */
+.cart {
+    background: rgb(156, 144, 144);
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+.cart-controls button {
+    margin: 0 0.3rem;
+}
+
+/* ======================
+   BOTÓN SOPORTE
+   ====================== */
+.support-btn {
+    margin: 2rem;
+    padding: 1rem;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ======================
+   MODALES
+   ====================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.whatsapp,
+.email {
+    display: block;
+    margin: 1rem 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* ======================
+   HERO
+   ====================== */
+.hero {
+    position: relative;
+    background-image: url("https://www.araguaocio.es/wp-content/uploads/2021/02/entrenam-personal.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1,
+.hero h2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* ======================
+   PESTAÑAS
+   ====================== */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #000;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+/* ======================
+   GRID DE PRODUCTOS
+   ====================== */
+.tab-content.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    .tab-content.active {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ======================
+   COMPARTIR / QR
+   ====================== */
+.share-box {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.share-box button {
+    background: #000;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#qr-container {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+#qrcode {
+    margin: auto;
+}
+/* MENSAJE PRODUCTO AÑADIDO */
+.confirmation.added {
+    bottom: 20px;
+    right: 20px;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    animation: fadeIn 0.3s ease;
+}
+
+/* MENSAJE COMPRA EXITOSA */
+.confirmation {
+    position: fixed;
+    z-index: 2000;
+    display: none;
+    font-weight: bold;
+}
+.confirmation.success {
+    top: 30px;
+    right: 20px;
+    width: 280px;
+    background: #28a745;
+    color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s ease;
+}
+
+/* Contenido interno */
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Icono */
+.confirmation .icon {
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+/* Texto */
+.confirmation .text strong {
+    display: block;
+    font-size: 15px;
+}
+
+.confirmation .text small {
+    font-size: 13px;
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .confirmation.success {
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
+/* ANIMACIÓN VUELA AL CARRITO */
+.fly-img {
+    position: fixed;
+    width: 80px;
+    z-index: 1000;
+    pointer-events: none;
+    transition: all 0.8s ease-in-out;
+}
+
+#invoice-modal .modal-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+#invoice-content p {
+    font-size: 14px;
+}
+.checkout-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    animation: fadeIn 0.3s ease;
+}
+
+.checkout-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #222;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.cart-box {
+    max-width: 500px;
+    text-align: left;
+}
+
+.cart-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
