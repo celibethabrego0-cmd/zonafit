@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ZonaFit Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- LIBRERÍA QR -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="C:\Users\celibeth\Documents\2026\TiendaOnline\img\img1.1.png" alt="ZonaFit">
+            </a>
+</div>
+
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button>🔍</button>
+    </div>
+
+    <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>¡Bienvenido a ZonaFit!</h1>
+    <h2>Comodidad que te acompaña</h2>
+</section>
+
+<section class="products">
+
+    <!-- PESTAÑAS -->
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('damas', this)">Damas</button>
+        <button class="tab" onclick="showTab('caballeros', this)">Caballeros</button>
+        <button class="tab" onclick="showTab('accesorios', this)">Accesorios</button>
+        <button class="tab" onclick="showTab('calzados', this)">Calzados</button>
+    </div>
+
+    <!-- DAMAS -->
+    <div class="tab-content active" id="damas">
+        <div class="product" data-tab="damas">
+
+            <!-- IMAGEN DEL PRODUCTO -->
+            <img 
+                src="https://i.pinimg.com/736x/1a/7d/ce/1a7dcebd92d82288b28c02a0560fd143.jpg" 
+                alt="Conjunto Deportivo Dama"
+                class="product-img"
+    >
+
+    <h3>Conjunto Deportivo Dama</h3>
+    <p>$30.00</p>
+
+
+            <div class="sizes">
+                <span class="size">S</span>
+                <span class="size">M</span>
+                <span class="size">L</span>
+            </div>
+
+            <div class="colors">
+                <span class="color" data-color="Negro" style="background:black"></span>
+                <span class="color" data-color="Rojo" style="background:red"></span>
+            </div>
+
+            <button class="add-to-cart"
+                data-name="Conjunto Deportivo Dama"
+                data-price="30">
+                Añadir al carrito
+            </button>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/01/ba/c5/01bac5343bf21e3d74a6ff9a6edb4d83.jpg"
+             alt="Slim Fitness"
+             class="product-img">
+
+        <h3>Slim Fitness</h3>
+        <p>$22.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+        </div>
+
+        <div class="colors">
+            <span class="color" data-color="Negro" style="background:black"></span>
+            <span class="color" data-color="Azul" style="background:blue"></span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Slim Fitness"
+            data-price="22">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 3 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/40/7d/a8/407da8dc87866f4e99b238552a1d2eed.jpg"
+             alt="Top Deportivo"
+             class="product-img">
+
+        <h3>Top Deportivo</h3>
+        <p>$18.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Top Deportivo"
+            data-price="18">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 4 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/df/bd/9c/dfbd9caae920e953478d2e8195e98836.jpg"
+             alt="High Stretch"
+             class="product-img">
+
+        <h3>High Stretch</h3>
+        <p>$22.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+        </div>
+
+        <div class="colors">
+            <span class="color" data-color="Negro" style="background:black"></span>
+            <span class="color" data-color="verde" style="background:rgb(217, 255, 0)"></span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="High Stretch"
+            data-price="22">
+            Añadir al carrito
+        </button>
+        </div>
+
+         <!-- PRODUCTO 5 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/86/7e/54/867e54fe856c9d91cdace90ee9e2ffd3.jpg"
+             alt="Top Tennis Styles"
+             class="product-img">
+
+        <h3>Top Tennis Styles</h3>
+        <p>$29.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Top Tennis Styles"
+            data-price="29">
+            Añadir al carrito
+        </button>
+        </div>
+
+         <!-- PRODUCTO 6 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/b0/d1/9a/b0d19af36f1f275aeafea4b16b6e2a3d.jpg"
+             alt="Conjunto Styles"
+             class="product-img">
+
+        <h3>Conjunto Styles</h3>
+        <p>$19.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Conjunto Styles"
+            data-price="19">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 7 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/8e/2d/6d/8e2d6d9746da89eadb95ee381c10ca2b.jpg"
+             alt="Katia Fitness"
+             class="product-img">
+
+        <h3>Katia Fitness</h3>
+        <p>$39.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Katia Fitness"
+            data-price="39">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 8 -->
+    <div class="product" data-tab="damas">
+        <img src="https://i.pinimg.com/736x/db/ad/2a/dbad2a70aeda12151eae502d2aa6e097.jpg"
+             alt="Street-Ready Fitness"
+             class="product-img">
+
+        <h3>Street-Ready Fitness</h3>
+        <p>$20.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Street-Ready Fitness"
+            data-price="20">
+            Añadir al carrito
+        </button>
+        </div>
+    </div>
+
+    <!-- CABALLEROS -->
+    <div class="tab-content" id="caballeros">
+        <div class="product" data-tab="caballeros">
+
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+                 alt="Camiseta Caballero"
+                 loading="lazy">
+
+            <h3>Camiseta Caballero</h3>
+            <p>$25.00</p>
+
+            <div class="sizes">
+                <span class="size">M</span>
+                <span class="size">L</span>
+                <span class="size">XL</span>
+            </div>
+
+            <button class="add-to-cart"
+                data-name="Camiseta Caballero"
+                data-price="25">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- PRODUCTO 2 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/13/78/0a/13780a4ed546326829ed9dc0fe1460aa.jpg"
+             alt="Chaqueta Deportiva"
+             class="product-img">
+
+        <h3>Chaqueta Deportiva</h3>
+        <p>$20.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Chaqueta Deportiva"
+            data-price="20">
+            Añadir al carrito
+        </button>
+        </div>
+
+         <!-- PRODUCTO 3 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/db/a2/8d/dba28d567012c7da4ca8c461589747ca.jpg"
+             alt="Sudadera Fitness"
+             class="product-img">
+
+        <h3>Sudadera Fitness</h3>
+        <p>$29.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Sudadera Fitness"
+            data-price="29">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 4 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/6c/17/44/6c1744f5ec29711d4a65b2baf010fdc1.jpg"
+             alt="Deportivo ADIDAS"
+             class="product-img">
+
+        <h3>Deportivo ADIDAS</h3>
+        <p>$39.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Deportivo ADIDAS"
+            data-price="39">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 5 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/e1/b7/75/e1b775bb751dacaa7499a5e3548a176f.jpg"
+             alt="Chaqueta Jacken"
+             class="product-img">
+
+        <h3>Chaqueta Jacken</h3>
+        <p>$31.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <div class="colors">
+            <span class="color" data-color="Negro" style="background:black"></span>
+            <span class="color" data-color="Rojo" style="background:red"></span>
+            <span class="color" data-color="Verde" style="background:green"></span>
+            <span class="color" data-color="Azul" style="background:blue"></span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Chaqueta Jacken"
+            data-price="31">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 6 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/b6/87/2f/b6872fc46a239ffc62e78d751ef32604.jpg"
+             alt="Siddick Chaqueta"
+             class="product-img">
+
+        <h3>Siddick Chaqueta</h3>
+        <p>$27.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Siddick Chaqueta"
+            data-price="27">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 7 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/df/17/1b/df171b0f5a69d2ae05bd0792529fdbb1.jpg"
+             alt="Street-Deportivo"
+             class="product-img">
+
+        <h3>Street-Deportivo</h3>
+        <p>$30.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Street-Deportivo"
+            data-price="30">
+            Añadir al carrito
+        </button>
+        </div>
+
+        <!-- PRODUCTO 8 -->
+    <div class="product" data-tab="caballeros">
+        <img src="https://i.pinimg.com/736x/92/84/56/928456391bdb32a2f9d05aade46dc400.jpg"
+             alt="Body-Casual"
+             class="product-img">
+
+        <h3>Body-Casual</h3>
+        <p>$25.00</p>
+
+        <div class="sizes">
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">1xL</span>
+        </div>
+
+        <button class="add-to-cart"
+            data-name="Body-Casual"
+            data-price="25">
+            Añadir al carrito
+        </button>
+        </div>
+    </div>
+
+    <!-- ACCESORIOS -->
+    <div class="tab-content" id="accesorios">
+        <div class="product" data-tab="accesorios">
+
+            <img src="https://i.pinimg.com/736x/4c/0e/90/4c0e90ecd46379e2696b7ada4e4f99e1.jpg"
+                 alt="Botella Spdr Deportiva"
+                 class="product-img">
+
+            <h3>Botella Spdr Deportiva</h3>
+            <p>$18.00</p>
+
+            <button class="add-to-cart"
+                data-name="Botella Spdr Deportiva"
+                data-price="18">
+                Añadir al carrito
+            </button>
+        </div>
+
+             <!-- Producto 2 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/9d/91/b6/9d91b6721558603cfbd1725717944694.jpg"
+                 alt="Guantes Puma At Gym"
+                 class="product-img">
+
+            <h3>Guantes Puma At Gym</h3>
+            <p>$20.00</p>
+
+            <button class="add-to-cart"
+                data-name="Guantes Puma At Gym"
+                data-price="20">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 3 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/1200x/7b/82/f0/7b82f045cb5b3be6b6d7f46a1c061b71.jpg"
+                 alt="Banda Resistente Gym"
+                 class="product-img">
+
+            <h3>Banda Resistente Gym</h3>
+            <p>$14.00</p>
+
+            <button class="add-to-cart"
+                data-name="Banda Resistente Gym"
+                data-price="14">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 4 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/b0/c7/c3/b0c7c3e0518e74ca500850a62313248d.jpg"
+                 alt="Banda De Mano con Cremallera Gym"
+                 class="product-img">
+
+            <h3>Banda de Mano con Cremallera Gym</h3>
+            <p>$9.00</p>
+
+            <button class="add-to-cart"
+                data-name="Banda de Mano con Cremallera Gym"
+                data-price="9">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 5 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/5c/d5/77/5cd577cba247c004b9fe795386ad378e.jpg"
+                 alt="Set fitness premium DEEPFIT para gimnasio y entrenamiento funcional"
+                 class="product-img">
+
+            <h3>Set fitness premium DEEPFIT para gimnasio y entrenamiento funcional</h3>
+            <p>$42.00</p>
+
+            <button class="add-to-cart"
+                data-name="Set fitness premium DEEPFIT para gimnasio y entrenamiento funcional"
+                data-price="42">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 6 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/da/f6/a8/daf6a8390bafe3c632d1b62ae8aca0ed.jpg"
+                 alt="Corrector de Postura"
+                 class="product-img">
+
+            <h3>Corrector De Postura</h3>
+            <p>$27.00</p>
+
+            <button class="add-to-cart"
+                data-name="Corrector de Postura"
+                data-price="27">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 7 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/a5/19/b2/a519b25af0268171327ff7e401b7e655.jpg"
+                 alt="Set fitness multifuncional para entrenamiento, tonificación y recuperación muscular"
+                 class="product-img">
+
+            <h3>Set fitness multifuncional para entrenamiento, tonificación y recuperación muscular</h3>
+            <p>$48.00</p>
+
+            <button class="add-to-cart"
+                data-name="Set fitness multifuncional para entrenamiento, tonificación y recuperación muscular"
+                data-price="48">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!-- Producto 8 -->
+        <div class="product" data-tab="accesorios">
+            <img src="https://i.pinimg.com/736x/25/72/60/2572601fe04206e80cdd54609e878176.jpg"
+                 alt="Bolso Resistente Gym"
+                 class="product-img">
+
+            <h3>Bolso Resistente Gym</h3>
+            <p>$109.00</p>
+
+        <div class="colors">
+            <span class="color" data-color="Negro" style="background:black"></span>
+            <span class="color" data-color="Rojo" style="background:red"></span>
+            <span class="color" data-color="Verde" style="background:green"></span>
+            <span class="color" data-color="Azul" style="background:blue"></span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Bolso Resistente Gym"
+                data-price="109">
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- CALZADOS -->
+    <div class="tab-content" id="calzados">
+        <div class="product" data-tab="calzados">
+
+            <img src="https://i.pinimg.com/736x/85/e7/9c/85e79c89acf2d8d007439f199d06d62a.jpg"
+                 alt="Zapatillas-ADIDAS Deportivas"
+                 class="product-img">
+
+            <h3>Zapatillas-ADIDAS Deportivas</h3>
+            <p>$45.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Zapatillas-ADIDAS Deportivas"
+                data-price="45">
+                Añadir al carrito
+            </button>
+        </div>
+    
+             <!--Producto 2-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/6d/5e/84/6d5e844e4938bcbcacdbe3cc6d226ec3.jpg"
+                 alt="NIKE-AIR MAX Deportivas"
+                 class="product-img">
+
+            <h3>NIKE-AIR MAX Deportivas</h3>
+            <p>$39.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="NIKE-AIR MAX Deportivas"
+                data-price="39">
+                Añadir al carrito
+            </button>
+        </div>
+
+             <!--Producto 3-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/be/b9/e2/beb9e2e6a1304babd4b6ef76f1f0f442.jpg"
+                 alt="Tenis para entrenamiento NIKE MC Trainer 3"
+                 class="product-img">
+
+            <h3>Tenis para entrenamiento NIKE MC Trainer 3</h3>
+            <p>$49.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Tenis para entrenamiento NIKE MC Trainer 3"
+                data-price="49">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!--Producto 4-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/dc/df/f5/dcdff5328c3657c51458e64f7ed5eb7b.jpg"
+                 alt="NIKE Speed x"
+                 class="product-img">
+
+            <h3>NIKE Speed x</h3>
+            <p>$45.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="NIKE Speed x"
+                data-price="45">
+                Añadir al carrito
+            </button>
+        </div>
+            <!--Producto 5-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/28/01/28/2801289f9bd11d418335279e8b9f9625.jpg"
+                 alt="Puma Viz Runner Mens Black White"
+                 class="product-img">
+
+            <h3>Puma Viz Runner Mens Black White</h3>
+            <p>$50.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Puma Viz Runner Mens Black White"
+                data-price="50">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!--Producto 6-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/fc/0f/56/fc0f56e472e21c59edb8cd06b39195d1.jpg"
+                 alt="Tenis para entrenamiento ADIDAS"
+                 class="product-img">
+
+            <h3>Tenis para entrenamiento ADIDAS</h3>
+            <p>$37.00</p>
+
+        <div class="sizes">
+            <span class="size">38</span>
+            <span class="size">39</span>
+            <span class="size">40</span>
+            <span class="size">41</span>
+            <span class="size">42</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Tenis para entrenamiento ADIDAS"
+                data-price="37">
+                Añadir al carrito
+            </button>
+        </div> 
+
+            <!--Producto 7-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/b0/c3/4a/b0c34af487df9199507acd4326fffca3.jpg"
+                 alt="Womens-Mens Clothing Shop online Fashion"
+                 class="product-img">
+
+            <h3>Womens-Mens Clothing Shop online Fashion</h3>
+            <p>$29.00</p>
+
+        <div class="sizes">
+            <span class="size">35</span>
+            <span class="size">36</span>
+            <span class="size">37</span>
+            <span class="size">38</span>
+            <span class="size">39</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="Womens-Mens Clothing Shop online Fashion"
+                data-price="29">
+                Añadir al carrito
+            </button>
+        </div>
+
+            <!--Producto 8-->
+         <div class="product" data-tab="calzados">
+            <img src="https://i.pinimg.com/736x/81/0d/22/810d2203fc85262f931c383e3cff0ffb.jpg"
+                 alt="NEW Balance-530"
+                 class="product-img">
+
+            <h3>NEW Balance-530</h3>
+            <p>$49.00</p>
+
+        <div class="sizes">
+            <span class="size">38</span>
+            <span class="size">39</span>
+            <span class="size">40</span>
+            <span class="size">41</span>
+            <span class="size">42</span>
+        </div>
+
+            <button class="add-to-cart"
+                data-name="NEW Balance-530"
+                data-price="49">
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+</section>
+
+<!-- CARRITO -->
+<section class="cart">
+    <h2>🛒 Carrito</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0.00</span></h3>
+    <button onclick="openCheckout()">Finalizar compra</button>
+</section>
+
+
+<!-- CHECKOUT -->
+<div id="checkout-modal" class="modal">
+  <div class="modal-content checkout-box">
+    <span class="close" onclick="closeCheckout()">×</span>
+
+    <h2>Finalizar compra</h2>
+
+    <div class="form-group">
+      <label>Nombre completo</label>
+      <input type="text" id="name" placeholder="Ej: Celibeth Abrego">
+    </div>
+
+    <div class="form-group">
+      <label>Teléfono</label>
+      <input type="tel" id="phone" placeholder="Ej: 507 6000-0000">
+    </div>
+
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <input type="email" id="email" placeholder="Ej: correo@email.com">
+    </div>
+
+    <div class="form-group">
+      <label>Método de pago</label>
+      <select id="payment-method">
+        <option value="">Selecciona una opción</option>
+        <option value="card">Pago con Tarjeta (Simulado)</option>
+      </select>
+    </div>
+
+    <button class="btn-primary" onclick="processCheckout()">
+      Enviar pedido
+    </button>
+  </div>
+</div>
+
+<!-- SOPORTE -->
+<button class="support-btn" onclick="openSupport()">💬 Atención al Cliente</button>
+
+<div id="support-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSupport()">×</span>
+        <h2>Atención al Cliente</h2>
+
+        <a class="whatsapp"
+           href="https://wa.me/50764000000"
+           target="_blank">💬 WhatsApp</a>
+
+        <a class="email"
+           href="mailto:soporte@zonafit.com">📧 Enviar correo</a>
+    </div>
+</div>
+
+<!-- COMPARTIR / QR -->
+<div class="share-box">
+    <button onclick="toggleQR()">📲 Compartir página</button>
+    <div id="qr-container" style="display:none;">
+        <div id="qrcode"></div>
+        <p>Escanea para visitar ZonaFit</p>
+    </div>
+
+<!-- MENSAJE DE CONFIRMACIÓN -->
+<div id="confirmation" class="confirmation sucess">
+    <div class="confirmation-content">
+        <span class="icon">✅</span>
+        <div class="text">
+            <strong>Pedido enviado correctamente</strong>
+            <small>Gracias por comprar en ZonaFit
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="payment-modal">
+<div class="modal-content">
+    <span class="close" onclick="closePayment()">✖</span>
+
+    <div class="payment-box">
+        <h2>💳 Pago con Tarjeta</h2>
+
+        <div class="form-group">
+            <label>Número de tarjeta</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="form-group">
+            <label>Nombre del titular</label>
+            <input type="text" placeholder="Nombre completo">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>MM/AA</label>
+                <input type="text" placeholder="MM/AA">
+            </div>
+
+            <div class="form-group">
+                <label>CVV</label>
+                <input type="text" placeholder="123">
+            </div>
+        </div>
+
+        <button class="btn-pay" onclick="confirmPayment()">🔒 Pagar ahora</button>
+
+        <small class="secure-text">
+            Pago seguro • Datos protegidos
+        </small>
+    </div>
+</div>
+
+
+<!-- FACTURA -->
+<div id="invoice-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeInvoice()">×</span>
+        <div id="invoice-content"></div>
+    </div>
+
+<!-- Producto añadido -->
+<div id="added-message" class="confirmation added">
+    🛒 Producto añadido al carrito
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
